@@ -1,0 +1,28 @@
+body {
+    background-image: url(https://universemagazine.com/wp-content/uploads/2022/06/d1nvcmn-c86586a5-361f-4e24-9ccb-214eaa34b92c.jpg);
+    background-size: cover;
+    color: white;
+}
+
+
+
+#songTextInput {
+    outline: none;
+    width: 80px;
+    transition-property: width;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
+}
+
+#songTextInput:focus {
+    width: 200px;
+}
+
+footer {
+    bottom: 0.5%;
+    left: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width:fit-content;
+}

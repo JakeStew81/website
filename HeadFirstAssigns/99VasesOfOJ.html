@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+    <meta charset="utf-8">
+    <title>Ninety-nine Vases of Orange Juice</title>
+    <style>
+        body {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        }
+
+        h1 {
+        font-size: 3.5vw;
+        }
+
+        #song>p {
+        text-align: center;
+        font-size: 2.5vw;
+        }
+
+        #song>p:hover {
+        font-weight: bold;
+        }
+
+        i:hover {
+        font-size: 20vw
+        }
+    </style>
+    <script>
+        function init() {
+        var loc = window.location.href;
+        var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+        var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+            loc + '?profile=css3';
+        document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+        document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+        }
+
+        window.onload = init;
+    </script>
+    </head>
+
+    <body>
+    <header>
+        <h1>Ninety-nine Vases of Orange Juice</h1>
+    </header>
+    <h2>Summary</h2>
+    <p>
+        <ul>
+        <li>HTML5 is a big deal, as it is easier to use, has javascript as its default scripting language, and css as its default style, making it so you dont have to specify</li>
+        <li>HTML5 is super good for making interactive webpages, or even web apps</li>
+        <li>HTML5 is happy to overlook small errors in HTML5, that's partially why it won out over XHTML</li>
+        <li>HTML5 models pages in a tree</li>
+        <li>Java Script is loaded <b>after</b> HTML and CSS</li>
+        </ul>
+    </p>
+    <h2>Script</h2>
+    <main id="song">
+
+    </main>
+    <footer>
+        <a id="vLink1"><strong> HTML </strong> Valid! </a> |
+        <a id="vLink2"><strong> CSS </strong> Valid! </a>
+    </footer>
+    <script>
+        let drink = "Orange Juice";
+        let lyrics = "";
+        let Vases = 99;
+
+        while (Vases > 1) {
+        lyrics += "<p>";
+        lyrics += Vases + " Vases of " + drink + " on the wall <br>";
+        lyrics += Vases + " Vases of " + drink + " on the wall <br>";
+        lyrics += "Take one down, pass it around,";
+        lyrics += "</p>";
+        Vases--;
+        }
+        lyrics += "<p>";
+        lyrics += Vases + " Vase of " + drink + " on the wall <br>";
+        lyrics += Vases + " Vase of " + drink + " on the wall <br>";
+        lyrics += "Take one down, pass it around, no more Vases of ";
+        lyrics += drink + " on the wall :-(";
+        lyrics += "</p>";
+
+        document.getElementById("song").innerHTML = lyrics;
+    </script>
+    <script type='text/javascript'
+        src="https:////jelkner.github.io/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/inject.js"></script>
+    </body>
+    <footer>
+        <a id="vLink1">
+        <strong> HTML </strong> Valid! </a> |
+        <a id="vLink2">
+        <strong> CSS </strong> Valid! </a>
+    </footer>
+</html>
