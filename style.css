@@ -24,7 +24,8 @@ footer a {
 }
 
 .middle {
-    width:fit-content;
+    width:90%;
+    line-height: 300%;
     top: 50%;
     left: 50%;
     position:fixed;

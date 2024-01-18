@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>JS Event Handlers</title>
+        <script>
+            function vote() {
+                var t = "Your favorite sport is: ";
+                for (i = 0; i < document.myform.sports.length; i++) {
+                    if (document.myform.sports[i].checked == true) {
+                        t = t + document.myform.sports[i].value;
+                    }
+                }
+                if (t == "Your favorite sport is: ") {
+                    document.getElementById("txt").value = "Choose a sport";
+                } else {
+                    document.getElementById("txt").value = t;
+                    document.getElementById("txt1").value = t;
+                    document.getElementById("txt2").value = t;
+                }
+            }
+            function upperCase() {
+                var x = document.getElementById("txt").value;
+                document.getElementById("txt").value = x.toUpperCase();
+            }
+            function SayHello() {
+                alert("Your mouse is over the text!");
+            }
+            function SayGoodbye() {
+                alert("Your mouse has left the text!");
+            }
+        </script>
+        <link rel="stylesheet" href="../style.css">
+        <div class="topnav">
+            <h3>CIW Advanced HTML5 and CSS3 Specialist</h3>
+        </div>  
+    </head>
+    <body>
+        <h4>Event Handler Examples</h4>
+        Vote for your favorite sport:
+        <form name="myform">
+            <input type="radio" name="sports" value="Robotics" />Robotics<br/>
+            <input type="radio" name="sports" value="Robotics" />Robotics<br/>
+            <input type="radio" name="sports" value="Robotics is the best, therefore I don't need other options" />Robotics is the best, therefore I don't need other options<br/>
+            <input type="radio" name="sports" value="Robotics" />Robotics<br/>
+            <input type="radio" name="sports" value="Robotics" />Robotics<br/>
+            <input type="radio" name="sports" value="Everything else is bad, therefore robotics" />Everything else is bad, therefore robotics<br/>
+            <input type="radio" name="sports" value="Robotics" />Robotics<br/>
+            <p><input type="button" value="VOTE" onclick="vote()" /> <input type="reset" value="RESET" /></p>
+            <p><input type="text" id="txt" size="40" onblur="upperCase()" /> Click in then out!</p>
+            <p><input type="text" id="txt1" size="40" onmouseover="SayHello()" /> Hover over this field!</p>
+            <p><input type="text" id="txt2" size="40" onmouseout="SayGoodbye()" /> Hover this field then away!</p>
+        </form>
+    </body>
+</html>

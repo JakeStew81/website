@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Functions with parameters and returns</title>
+        <link rel="stylesheet" href="../style.css">
+        <div class="topnav"></div> 
+        <h1> </h1>
+        <script>
+            function myFunction(arg1) {
+                alert("The function has been called and was passed " + arg1);
+                return "myFunction() returned something! Cool.";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="middle">
+            <form name="myForm">
+                <input type="button" value="Call Function" onclick="alert(myFunction('a string of text'));" />
+            </form>
+        </div>
+    </body>
+    <footer>
+        <a id="vLink1">
+        <strong> HTML </strong> Valid! </a> |
+        <a id="vLink2">
+        <strong> CSS </strong> Valid! </a>
+    </footer>
+</html>
