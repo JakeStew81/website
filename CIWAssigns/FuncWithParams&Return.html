@@ -7,7 +7,7 @@
         <h1> </h1>
         <script>
             function myFunction(arg1) {
-                alert("The function has been called and was passed " + arg1);
+                console.log("The function has been called and was passed " + arg1);
                 return "myFunction() returned something! Cool.";
             }
         </script>
@@ -15,7 +15,7 @@
     <body>
         <div class="middle">
             <form name="myForm">
-                <input type="button" value="Call Function" onclick="alert(myFunction('a string of text'));" />
+                <input type="button" value="Call Function" onclick="console.log(myFunction('a string of text'));" />
             </form>
         </div>
     </body>
