@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>uCorp</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $("#show_button").hide();
+                $("#hide_button").click(function () {
+                    $("article").hide();
+                    $("#hide_button").hide();
+                    $("#show_button").show();
+                });
+                $("#show_button").click(function () {
+                    $("article").show();
+                    $("#show_button").hide();
+                    $("#hide_button").show();
+                });
+            });
+        </script>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <section>
+            <button id='hide_button'>Hide Articles</button>
+            <button id="show_button">Show Articles</button>
+            <br><br>
+            <article>Hi there how's it going</article>
+            <article class="middle">Hello!</article>
+        </section>
+    </body>
+    
+</html>

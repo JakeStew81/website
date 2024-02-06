@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML5 Canvas API Example</title>
+        <link rel="stylesheet" href="../../style.css">
+    </head>
+    <body>
+        <h1>CIW Advanced HTML5 and CSS3 Specialist</h1>
+        <h2>Canvas Demonstration</h2>
+        <canvas id="canvas" width="200" height="200"></canvas>
+        <script>
+            function draw() {
+                var canvas = document.getElementById("canvas");
+                if (canvas.getContext) {
+                    var ctx = canvas.getContext("2d");
+                    ctx.beginPath();
+                    ctx.lineWidth = 3;
+                    ctx.fillStyle = "yellow";
+                    ctx.arc(75, 75, 50, 0, Math.PI * 2, true); // Outer circle
+                    ctx.fill();
+                    ctx.moveTo(110,115);
+                    ctx.arc(75, 110, 35, 0, Math.PI, true); // Mouth (clockwise)
+                    ctx.moveTo(65,65);
+                    ctx.arc(60, 65, 5, 0, Math.PI * 2, true); // Left eye
+                    ctx.moveTo(95,65);
+                    ctx.arc(90, 65, 5, 0, Math.PI * 2, true); // Right eye
+                    ctx.stroke();
+                }
+            }
+            window.onload = draw;
+        </script>
+    </body>
+    <footer>
+        <a id="vLink1">
+        <strong> HTML </strong> Valid! </a> |
+        <a id="vLink2">
+        <strong> CSS </strong> Valid! </a>
+    </footer>
+</html>
